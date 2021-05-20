@@ -32,12 +32,6 @@ contract AdmaConsumer is AdamoracleClient {
     request.add("get", "https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD");
     request.add("path", "USD");
 
-    // request.add("get", "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH&tsyms=USD");
-    // request.add("path", "RAW.ETH.USD.VOLUME24HOUR");
-
-    // request.add("get","https://www.okex.com/api/v5/market/ticker?instId=ETH-USD-SWAP");
-    // request.add("path","data[0].last");
-
     int _times = 10 ** 18;
     request.addInt("times", _times);
     return sendAdamoracleRequest(request, _payment);
